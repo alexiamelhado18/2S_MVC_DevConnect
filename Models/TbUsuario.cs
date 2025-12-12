@@ -43,4 +43,12 @@ public partial class TbUsuario
 
     [InverseProperty("IdUsuarioNavigation")]
     public virtual ICollection<TbPublicacao> TbPublicacao { get; set; } = new List<TbPublicacao>();
+
+    [ForeignKey("IdUsuarioSeguidor")]
+    [InverseProperty("IdUsuarioSeguidor")]
+    public virtual ICollection<TbUsuario> IdUsuarioSeguido { get; set; } = new List<TbUsuario>();
+
+    [ForeignKey("IdUsuarioSeguido")]
+    [InverseProperty("IdUsuarioSeguido")]
+    public virtual ICollection<TbUsuario> IdUsuarioSeguidor { get; set; } = new List<TbUsuario>();
 }

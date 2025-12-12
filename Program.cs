@@ -1,8 +1,11 @@
 using DevConnectMoura.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<DevConnectContext>();
+builder.Services.AddDbContext<DevConnectContext>(options => 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DevCon_SA"))
+);
 
 
 // Add services to the container.

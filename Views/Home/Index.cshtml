@@ -2,41 +2,50 @@
     ViewData["Title"] = "Logo DevConnect";
 }
 <link rel="stylesheet" href="~/css/login.css">
+
+<script defer>
+    let usuarioNovoCadastrado = "@TempData["UsuarioNovoCadastrado"]";
+
+    if(usuarioNovoCadastrado == "Cadastrado"){
+        alert("Usuário cadastrado com sucesso! Se logue para navegar em nossa plataforma 😄");
+    }
+</script>
+
 <h1>Tela principal login - DevConnect</h1>
-    <main>
-        <div>
-            <!-- formulario -->
-            <form class="estilo-formulario">
-                <img src="~/images/logo-devconnect-lg.svg" alt="Logo DevConnect">
+<main>
+    <div>
+        <!-- formulario -->
+        <form class="estilo-formulario">
+            <img src="~/images/logo-devconnect-lg.svg" alt="Logo DevConnect">
 
-                <div class="formulario-campos">
-                    <label for="">Nome de usuário:</label>
-                    <input type="text" name="" id="">
-                </div>
+            <div class="formulario-campos">
+                <label for="">Nome de usuário:</label>
+                <input type="text" name="" id="">
+            </div>
 
-                <div class="formulario-campos">
-                    <label for="">Senha:</label>
-                    <input type="password" name="" id="">
-                </div>
+            <div class="formulario-campos">
+                <label for="">Senha:</label>
+                <input type="password" name="" id="">
+            </div>
 
-                <button type="submit" class="formulario-botao-azul">Entrar</button>
+            <button type="submit" class="formulario-botao-azul">Entrar</button>
 
-                <p>ou</p>
+            <p>ou</p>
 
-                <a href="#">Esqueceu a senha?</a>
+            <a href="#">Esqueceu a senha?</a>
 
-            </form>
+        </form>
 
-            <section id="secao-cadastro" class="estilo-formulario">
-                <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
-            </section>
+        <section id="secao-cadastro" class="estilo-formulario">
+            <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+        </section>
 
-            <p>Obtenha o aplicativo</p>
+        <p>Obtenha o aplicativo</p>
 
-            <section id="secao-instalacao">
-                <img src="~/images/app-store.svg" alt="Imagem falando da instalação no App Store">
+        <section id="secao-instalacao">
+            <img src="~/images/app-store.svg" alt="Imagem falando da instalação no App Store">
 
-                <img src="~/images/google-play.svg" alt="Imagem falando da instalação no Play Store">
-            </section>
-        </div>
-    </main>
+            <img src="~/images/google-play.svg" alt="Imagem falando da instalação no Play Store">
+        </section>
+    </div>
+</main>

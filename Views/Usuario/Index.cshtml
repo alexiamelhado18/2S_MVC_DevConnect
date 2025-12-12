@@ -1,35 +1,46 @@
+@model DevConnectMoura.Models.TbUsuario
+
 <link rel="stylesheet" href="~/css/cadastro.css">
+
+<script defer>
+    let usuarioNovoCadastrado = "@ViewBag.UsuarioNovoCadastrado";
+
+    if(usuarioNovoCadastrado == "Nao cadastrado"){
+        alert("Não foi possível cadastrar esse usuário 😞! Fale com um dos nossos administradores.");
+    }
+</script>
+
 <h1>Tela cadastro - DevConnect</h1>
 <main>
     <div>
         <!-- formulario -->
-        <form class="estilo-formulario">
+        <form class="estilo-formulario" asp-action="Index" asp-controller="Usuario" enctype="multipart/form-data">
             <img src="~/images/logo-devconnect-lg.svg" alt="Logo DevConnect">
 
             <p>cadastre-se para comunidade exclusiva de desenvolvedores(as)</p>
 
             <div class="formulario-campos">
                 <label for="">Nome e Sobrenome:</label>
-                <input type="text" name="" id="">
+                <input type="text" asp-for="NomeCompleto" id="">
             </div>
 
             <div class="formulario-campos">
                 <label for="">Nome do usuário:</label>
-                <input type="text" name="" id="">
+                <input type="text" asp-for="NomeUsuario" id="">
             </div>
 
             <div class="formulario-campos">
                 <label for="">E-mail:</label>
-                <input type="email" name="" id="">
+                <input type="email" asp-for="Email" id="">
             </div>
 
             <div class="formulario-campos">
                 <label for="">Senha:</label>
-                <input type="password" name="" id="">
+                <input type="password" asp-for="Senha" id="">
             </div>
             <div id="upload">
                 <label for="campo-upload"> Faça upload da sua Imagem aqui... </label>
-                <input type="file" name="" id="campo-upload" accept="image/*">
+                <input type="file" name="Imagem" id="campo-upload" accept="image/*">
 
             </div>
 

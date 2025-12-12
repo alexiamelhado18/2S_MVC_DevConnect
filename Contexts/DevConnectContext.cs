@@ -65,6 +65,44 @@ public partial class DevConnectContext : DbContext
         modelBuilder.Entity<TbUsuario>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__tb_usuar__3213E83F334C96FC");
+
+            entity.HasMany(d => d.IdUsuarioSeguido).WithMany(p => p.IdUsuarioSeguidor)
+                .UsingEntity<Dictionary<string, object>>(
+                    "TbSeguidor",
+                    r => r.HasOne<TbUsuario>().WithMany()
+                        .HasForeignKey("IdUsuarioSeguido")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__tb_seguid__id_us__5DCAEF64"),
+                    l => l.HasOne<TbUsuario>().WithMany()
+                        .HasForeignKey("IdUsuarioSeguidor")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__tb_seguid__id_us__5CD6CB2B"),
+                    j =>
+                    {
+                        j.HasKey("IdUsuarioSeguidor", "IdUsuarioSeguido").HasName("PK__tb_segui__1132BEECF7C3A980");
+                        j.ToTable("tb_seguidor");
+                        j.IndexerProperty<int>("IdUsuarioSeguidor").HasColumnName("id_usuario_seguidor");
+                        j.IndexerProperty<int>("IdUsuarioSeguido").HasColumnName("id_usuario_seguido");
+                    });
+
+            entity.HasMany(d => d.IdUsuarioSeguidor).WithMany(p => p.IdUsuarioSeguido)
+                .UsingEntity<Dictionary<string, object>>(
+                    "TbSeguidor",
+                    r => r.HasOne<TbUsuario>().WithMany()
+                        .HasForeignKey("IdUsuarioSeguidor")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__tb_seguid__id_us__5CD6CB2B"),
+                    l => l.HasOne<TbUsuario>().WithMany()
+                        .HasForeignKey("IdUsuarioSeguido")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__tb_seguid__id_us__5DCAEF64"),
+                    j =>
+                    {
+                        j.HasKey("IdUsuarioSeguidor", "IdUsuarioSeguido").HasName("PK__tb_segui__1132BEECF7C3A980");
+                        j.ToTable("tb_seguidor");
+                        j.IndexerProperty<int>("IdUsuarioSeguidor").HasColumnName("id_usuario_seguidor");
+                        j.IndexerProperty<int>("IdUsuarioSeguido").HasColumnName("id_usuario_seguido");
+                    });
         });
 
         OnModelCreatingPartial(modelBuilder);
