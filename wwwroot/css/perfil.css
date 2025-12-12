@@ -1,0 +1,124 @@
+main{
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: var(--cor-azul-claro);
+    
+}
+
+#foto-de-perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: var(--borda);
+    margin-top: 10px;
+    
+   
+}
+
+#foto-de-perfil > div > img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    
+}
+
+.info-conta{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  
+}
+
+.info-perfil{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-conta > a{
+    text-decoration: none;
+    color: #2C666E;
+    font-size: var(--tamanho-fonte-md);
+}
+
+#publicacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#publicacoes-feitas{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-publi{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--cor-branco);
+    width: 50%;
+    border: var(--borda);
+    padding: 10px;
+}
+
+.card-publi > p{
+    margin-left: 20px
+}
+
+.card-publi > header{
+    padding: 15px;
+}
+
+.card-publi > header > a{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    text-decoration: none;
+    color: var(--cor-azul-escuro);
+    text-transform: lowercase;
+}
+
+.card-publi > article{
+    display: flex;
+    flex-direction: column;
+}
+
+.interacoes-publicacao{
+    display: flex;
+    width: 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    order: 1;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.interacoes-publicacao > button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 485px) {
+    #logo-mobile {
+        display: initial;
+        /*Volta o valor inicial de exibição*/
+    }
+  
+    #logo-desktop {
+        display: none;
+    }   
+  
+  }

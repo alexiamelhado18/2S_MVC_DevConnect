@@ -1,0 +1,184 @@
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container-flex-publi {
+    background-color: blueviolet;
+    /* height: 700px; */
+    width: 90%;
+    max-width: 900px;
+    display: flex;
+    /*ativa o flex*/
+    flex-direction: column;
+    /*muda a direção do flex*/
+    gap: 30px;
+}
+
+#storys {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: scroll;
+    gap: 30px;
+}
+
+#storys::-webkit-scrollbar {
+    width: 0;
+}
+
+.card-story {
+    /* background-color: cornflowerblue; */
+}
+
+.card-story>button {
+    background-color: transparent;
+    border: none;
+    /* text-decoration: none; */
+    /*SÓ PARA QUEM ESTÁ COM A TAG <a>*/
+
+    font-size: var(--tamanho-fonte-sm);
+    color: var(--cor-preto);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-story>button>img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+/* seção criar publi */
+.formulario-botao-azul {
+    width: 135px;
+}
+
+#criar-publi {
+    padding: 10px;
+}
+
+#criar-publi>h2 {
+    color: var(--cor-cinza-escuro2);
+    font-size: var(--tamanho-fonte-lg);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#criar-publi>form>textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    resize: none;
+    /*desabilita a redimensão do tamanho do elemento*/
+    border: var(--borda);
+
+    color: var(--cor-preto);
+    font-size: var(--tamanho-fonte-sm);
+}
+
+#criar-publi>form>textarea::placeholder {
+    color: var(--cor-cinza-medio);
+}
+
+#criar-publi>form>footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+/* seção publicações */
+#publicacoes {
+    background-color: chocolate;
+    width: 100%;
+}
+
+.card-publi {
+    background-color: var(--cor-branco);
+    width: 100%;
+    /* height: 600px; */
+}
+
+.card-publi>header {
+    padding: 15px;
+}
+
+.card-publi>header>a {
+    display: flex;
+    align-items: center;
+    /*alinha no sentindo contrario do flex*/
+    column-gap: 10px;
+    text-decoration: none;
+    color: var(--cor-preto);
+    text-transform: lowercase;
+}
+
+.card-publi>figure {
+    display: flex;
+    flex-direction: column;
+}
+
+.imagem-publicacao {
+    object-fit: cover;
+    /*redimensiona a imagem*/
+    object-position: center;
+    width: 100%;
+    height: 350px;
+}
+
+.card-publi>figure>figcaption {
+    color: var(--cor-preto);
+    font-size: var(--tamanho-fonte-md);
+    font-weight: 500;
+    display: flex;
+    /*por padrão o flexbox deixa os elementos em linha*/
+    align-items: center;
+    column-gap: 5px;
+    order: 2;
+    margin: 15px;
+}
+
+.descricao-publicacao {
+    font-size: var(--tamanho-fonte-sm);
+    font-weight: 400;
+}
+
+.interacoes-publicacao {
+    display: flex;
+    width: 88px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* gap */
+    order: 1;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.interacoes-publicacao>button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.card-publi>figure>button{
+    background-color: transparent;
+    border: none;
+
+    color: var(--cor-cinza-medio);
+    font-size: var(--tamanho-fonte-sm);
+
+    order: 3;
+
+    margin-left: 15px;
+}

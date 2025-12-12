@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevConnectMoura", "DevConnectMoura.csproj", "{3551AC49-29CF-14D9-D88B-75E92F3EE978}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3551AC49-29CF-14D9-D88B-75E92F3EE978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3551AC49-29CF-14D9-D88B-75E92F3EE978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3551AC49-29CF-14D9-D88B-75E92F3EE978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3551AC49-29CF-14D9-D88B-75E92F3EE978}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {403FDBB7-C82C-4A5B-BD10-59E51B29F571}
+	EndGlobalSection
+EndGlobal
